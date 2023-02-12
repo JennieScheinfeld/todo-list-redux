@@ -2,12 +2,13 @@ import {Todo} from "../../types"
 import * as actions from "../../actions/constants"
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import currentTodos from "components/todoList/todoList";
+import { store } from "redux/store";
 
 
 const initialState = {
   currentToDosCounter: 0,
   completedToDosCounter: 0,
-    currentToDos: {
+    currentTodos: {
         0: {
             text: 'My first Todo',
             completed: false
@@ -27,23 +28,17 @@ export const TodosSlice = createSlice({
     }
 
     state.currentToDosCounter += 1
-    state.currentToDos = {...state.currentToDos, [state.currentToDosCounter]: newTodo}
+    state.currentTodos = {...state.currentTodos, [state.currentToDosCounter]: newTodo}
     
     },
     toggleTodo: (state, action: PayloadAction<{id: string, completed: boolean}>) => {
-      // const {completed, id} = action.payload
-      // const removedList: { [key: string]: Todo }  = completed ? state.currentToDos : state.completedTodos
-      // const addToDoList: { [key: string]: Todo }  = completed ? state.completedTodos : state.currentToDos
-      // const toDo: Todo = removedList[id]
-      // delete removedList[id]
-      // addToDoList[id] = toDo
-
+      console.log('store:', store)
       const {completed, id} = action.payload
-      const todo: Todo = (state.currentToDos as { [key: string]: Todo })[id]
-      delete (state.currentToDos as { [key: string]: Todo })[id]
+      const todo: Todo = (state.currentTodos as { [key: string]: Todo })[id]
+      delete (state.currentTodos as { [key: string]: Todo })[id]
 
       state.completedToDosCounter += 1
-      state.completedTodos = {...state.completedTodos, [state.completedToDosCounter]: todo}
+      state.completedTodos = {...state.completedTodos, [state.completedToDosCounter]: {...todo, completed}}
     }
   },
 })

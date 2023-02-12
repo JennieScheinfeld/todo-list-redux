@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+interface YourProps {
+    mark?: boolean
+  }
+
 export const Container = styled.div`
     display: flex;
     width: 98%;
@@ -16,9 +20,13 @@ export const Container = styled.div`
 `
 
 export const StyledButton = styled.button`
-border: none;
-background-color: #131A22;
-color: white;
-font-family: 'Josefin Sans', sans-serif;
-font-size: 40px;
+    border: none;
+    background-color: #131A22;
+    color ${(p: YourProps) => p.mark ? 'gray' : 'white'};
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    :hover {
+        color: pink;
+    }
+
 `

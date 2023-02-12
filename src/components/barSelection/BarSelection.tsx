@@ -1,4 +1,5 @@
 import * as Style from './style'
+import { useState } from "react";
 
 
 interface BarSelectionProps {
@@ -7,8 +8,11 @@ interface BarSelectionProps {
   }
 
 export const BarSelection = (props: BarSelectionProps) => {
+
+    const [selection, setSelection] = useState({ })
+
     return <Style.Container>
-            <Style.StyledButton onClick={props.onCurrentTodos}>
+            <Style.StyledButton onClick={props.onCurrentTodos} >
                 Current todos
             </Style.StyledButton>
             <Style.StyledButton onClick={props.onCompletedTodos}>

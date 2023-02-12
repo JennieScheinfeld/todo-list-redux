@@ -23,13 +23,17 @@ export const TodoContainer = () => {
     const [currentDisplay, setCurrentDisplay] = useState(displays.CURRENT_TODOS)
     const dispatch: StoreDispatch = useDispatch()
     const { todos } = useSelector((state: StoreState) => state);
-    const currentToDos: { [key: string]: Todo }  = todos.currentToDos || {}
+    const currentTodos: { [key: string]: Todo }  = todos.currentTodos || {}
     const completedTodos: { [key: string]: Todo }  = todos.completedTodos || {}
+    console.log('currentToDos:', currentTodos)
+    console.log('completedTodos:', completedTodos)
+
 
 
 
     const onSubmit = (text: string) : void => {
         dispatch(addTodo(text))
+        onCurrentTodos()
     }
 
     const onCurrentTodos = () => {
@@ -44,9 +48,9 @@ export const TodoContainer = () => {
         switch (currentDisplay) {
             case displays.CURRENT_TODOS:
                 
-                return <TodoList todoList={currentToDos}/>
+                return <TodoList todoList={currentTodos} defaultString='Add more todos...'/>
             case displays.COMPLETED_TODOS:
-                return <TodoList todoList={completedTodos}/>
+                return <TodoList todoList={completedTodos} defaultString='No completed todos to show...'/>
 
         }
     }

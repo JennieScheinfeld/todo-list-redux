@@ -5,6 +5,6 @@ interface YourProps {
   }
 
 export const TodoItem = styled.div`
- text-decoration: ${(p: YourProps) => p.strikeThrough ? 'line-through' : ''};
+ text-decoration: ${(p: YourProps) => p.strikeThrough ? 'line-through' : 'none'};
  font-family: 'Josefin Sans', sans-serif;
 `

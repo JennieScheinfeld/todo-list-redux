@@ -22,7 +22,7 @@ export const StyledInputBox = styled.input`
 margin-left: 20px;
 border: none;
 background-color: #131A22;
-color: white;
+color: pink;
 font-family: 'Josefin Sans', sans-serif;
 font-size: 20px;
 border-radius: 6px;
