@@ -5,5 +5,11 @@ export const Container = styled.div`
     justify-content:space-evenly;
     flex-direction:column;
     align-items: center;
-    padding: 30px;
+    height: 100%;
+`
+
+export const Title = styled.h1`
+ color: #131A2;
+ margin-top: 5px;
+ font-family: 'Josefin Sans', sans-serif;
 `

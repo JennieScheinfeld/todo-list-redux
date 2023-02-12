@@ -8,12 +8,12 @@ interface BarSelectionProps {
 
 export const BarSelection = (props: BarSelectionProps) => {
     return <Style.Container>
-            <button onClick={props.onCurrentTodos}>
+            <Style.StyledButton onClick={props.onCurrentTodos}>
                 Current todos
-            </button>
-            <button onClick={props.onCompletedTodos}>
+            </Style.StyledButton>
+            <Style.StyledButton onClick={props.onCompletedTodos}>
                 Completed todos
-            </button >
+            </Style.StyledButton >
         </Style.Container>
     
    

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     display: flex;
-    width: 100%;
+    width: 98%;
     flex-direction: row;
     justify-content:space-evenly;
     margin-top: 20;
@@ -13,4 +13,12 @@ export const Container = styled.div`
     border-radius: 6px;
     font-size:25px;
     margin-bottom: 20px;
+`
+
+export const StyledButton = styled.button`
+border: none;
+background-color: #131A22;
+color: white;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 40px;
 `

@@ -1,6 +1,6 @@
 import {Todo} from '../../types'
 import React, { useState } from "react";
-
+import * as Style from './style'
 interface FormProps {
     onSubmit: Function;
   }
@@ -12,7 +12,8 @@ export const Form = (props: FormProps) => {
       }
 
     // add edit text and the edit buttonwill have setText func
-    return <form style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px'}} onSubmit={(e: any) => {
+    return <Style.StyledForm
+    onSubmit={(e: any) => {
         e.preventDefault()
 
         props.onSubmit(submittedText)
@@ -20,12 +21,12 @@ export const Form = (props: FormProps) => {
     }}>
     <div>
       <label>
-      <input type="string" id={submittedText} value={submittedText} onChange={handleChange}/>
+      <Style.StyledInputBox type="string" id={submittedText} value={submittedText} onChange={handleChange}/>
     </label>
      </div>
     <div>
-    <input style={{marginLeft: '10px'}} type="submit" value="Add todo" />
+    <Style.StyledButtons type="submit" value="Add todo" />
     </div>
-    </form>
+    </Style.StyledForm>
    
 }

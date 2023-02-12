@@ -26,6 +26,7 @@ export const TodoListItem = (props: TodoListItemProps) => {
 
     return <TodoItem strikeThrough={completed}>
          {props.showCheckBox ? <input type="checkbox"
+         style={{ 'marginRight': '10px'}}
         defaultChecked={completed}
         onChange={onToggle}/> : null}
         {props.text}

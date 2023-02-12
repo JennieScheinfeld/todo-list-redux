@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import { StoreState, StoreDispatch } from '../../redux/store';
-import { useSelector } from 'react-redux';
 import {TodoListItem} from '../todoListItem/TodoListItem'
 import {Todo} from '../../types'
 import { connect } from 'react-redux';
@@ -19,11 +16,11 @@ export const TodoList = (props: TodoListProps) => {
 
     return <>
     <Style.todos>
-    {ids.map(id => {
+    {ids.length ?ids.map(id => {
         const todo = props.todoList[id]
-            return <TodoListItem showCheckBox key={id} id={id} text={todo.text} completed={todo.completed}/>
+            return <TodoListItem showCheckBox={!todo.completed} key={id} id={id} text={todo.text} completed={todo.completed}/>
         } 
-        )}
+        ) : <h3 style={{ fontFamily: 'Josefin Sans, sans-serif'}}>Add more todos...</h3>}
     </Style.todos>
     </>
     

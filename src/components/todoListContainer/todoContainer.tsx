@@ -53,7 +53,7 @@ export const TodoContainer = () => {
 
 
     return <Style.Container>
-    <h2>Todo List:</h2>
+    <Style.Title>Todo List:</Style.Title>
     <BarSelection onCurrentTodos={onCurrentTodos} onCompletedTodos={onCompletedtTodos}/>
     <Form onSubmit={onSubmit}/>
     {showContent()}
