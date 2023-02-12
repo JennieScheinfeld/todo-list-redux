@@ -12,24 +12,19 @@ export const Form = (props: FormProps) => {
       }
 
     // add edit text and the edit buttonwill have setText func
-    return <form onSubmit={(e: any) => {
+    return <form style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px'}} onSubmit={(e: any) => {
         e.preventDefault()
-        const newTodo : Todo = {
-            text: submittedText,
-            completed: false
 
-        }
         props.onSubmit(submittedText)
         setText('')
     }}>
     <div>
       <label>
-       Todo:
       <input type="string" id={submittedText} value={submittedText} onChange={handleChange}/>
     </label>
      </div>
     <div>
-    <input type="submit" value="Add todo" />
+    <input style={{marginLeft: '10px'}} type="submit" value="Add todo" />
     </div>
     </form>
    
