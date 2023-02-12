@@ -19,7 +19,7 @@ export const Form = (props: FormProps) => {
             completed: false
 
         }
-        props.onSubmit(newTodo)
+        props.onSubmit(submittedText)
         setText('')
     }}>
     <div>

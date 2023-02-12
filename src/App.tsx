@@ -1,12 +1,8 @@
-import React from "react"
-import { TodoListContainer } from "./components/todoListContainer/todoListContainer"
-// import Typography from '@mui/material/Typography';
-// import Container from '@mui/material/Container';
-// import Grid from '@mui/material/Grid';
+import { TodoContainer } from "./components/todoListContainer/todoContainer"
 
 function App() {
     return (
-    <TodoListContainer/>
+    <TodoContainer/>
     );
   }
 
