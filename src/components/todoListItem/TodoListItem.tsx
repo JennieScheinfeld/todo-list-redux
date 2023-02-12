@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {TodoItem} from './style'
 import { toggleTodo } from '../../features/currentTodos/TodosSlice'
 import { StoreDispatch } from '../../redux/store';
@@ -19,8 +18,7 @@ export const TodoListItem = (props: TodoListItemProps) => {
     const onToggle = () => {
       dispatch(toggleTodo({ completed: !props.completed, id: props.id}))
   }
-    console.log("in the item:", props)
-    console.log("completed:", props.completed)
+
     return <TodoItem strikeThrough={props.completed}>
       <div>
         

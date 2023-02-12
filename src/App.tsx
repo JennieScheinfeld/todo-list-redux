@@ -1,4 +1,4 @@
-import { TodoContainer } from "./components/todoListContainer/todoContainer"
+import { TodoContainer } from "./components/todoListContainer/TodoContainer"
 
 function App() {
     return (

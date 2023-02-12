@@ -15,13 +15,13 @@ export const TodoList = (props: TodoListProps) => {
 
 
     return <>
-    <Style.todos>
+    <Style.Todos>
     {ids.length ?ids.map(id => {
         const todo = props.todoList[id]
             return <TodoListItem showCheckBox={!todo.completed} key={id} id={id} text={todo.text} completed={todo.completed}/>
         } 
         ) : <h3 style={{ fontFamily: 'Josefin Sans, sans-serif'}}>{props.defaultString}</h3>}
-    </Style.todos>
+    </Style.Todos>
     </>
     
    

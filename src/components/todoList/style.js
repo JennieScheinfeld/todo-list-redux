@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 
 
-export const todos = styled.div`
+export const Todos = styled.div`
     display: flex;
     width: 80%;
     justify-content:space-evenly;

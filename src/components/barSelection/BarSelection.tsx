@@ -1,6 +1,4 @@
 import * as Style from './style'
-import { useState } from "react";
-
 
 interface BarSelectionProps {
     onCurrentTodos: React.MouseEventHandler<HTMLButtonElement>;
@@ -8,8 +6,6 @@ interface BarSelectionProps {
   }
 
 export const BarSelection = (props: BarSelectionProps) => {
-
-    const [selection, setSelection] = useState({ })
 
     return <Style.Container>
             <Style.StyledButton onClick={props.onCurrentTodos} >

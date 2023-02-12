@@ -1,5 +1,4 @@
-import {Todo} from '../../types'
-import React, { useState } from "react";
+import { useState } from "react";
 import * as Style from './style'
 interface FormProps {
     onSubmit: Function;

@@ -3,7 +3,7 @@ import {Form} from '../form/Form'
 import { useDispatch, connect } from 'react-redux';
 import { addTodo } from '../../features/currentTodos/TodosSlice'
 import * as Style from './style'
-import {TodoList} from '../todoList/todoList'
+import TodoList from '../todoList/TodoList'
 import { useState } from "react";
 import BarSelection from 'components/barSelection/BarSelection';
 import { StoreState } from '../../redux/store';

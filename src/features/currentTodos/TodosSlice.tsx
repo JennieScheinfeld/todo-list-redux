@@ -1,7 +1,5 @@
 import {Todo} from "../../types"
-import * as actions from "../../actions/constants"
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import currentTodos from "components/todoList/todoList";
 import { store } from "redux/store";
 
 
